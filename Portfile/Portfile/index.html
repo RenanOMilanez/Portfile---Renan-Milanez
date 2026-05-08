@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renan Milanez Dev</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              inter: ['Inter', 'sans-serif']
+            },
+          }
+        }
+      }
+    </script>
+    <script type="text/javascript" src="./index.js" defer=""></script>
+    <link rel="stylesheet" href="./index.css">
+  </head>
+
+  <body class="noise grid-bg">
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300" style="backdrop-filter: blur(0px); background: transparent;">
+      <div class="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
+        <!-- Logo -->
+        <a href="#hero" class="flex items-center gap-2 group">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center text-black font-bold text-sm group-hover:scale-110 transition-transform">
+            D
+          </div>
+          <span class="font-semibold text-sm tracking-wide">DEV <span class="text-emerald-400">Renan Milanez</span></span>
+        </a>
+
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#about" class="nav-link text-sm text-neutral-400 hover:text-white transition-colors">Sobre</a>
+          <a href="#skills" class="nav-link text-sm text-neutral-400 hover:text-white transition-colors">Skills</a>
+          <a href="#projects" class="nav-link text-sm text-neutral-400 hover:text-white transition-colors">Projetos</a>
+          <a href="#experience" class="nav-link text-sm text-neutral-400 hover:text-white transition-colors">Experiência</a>
+          <a href="#contact" class="nav-link text-sm text-neutral-400 hover:text-white transition-colors">Contato</a>
+        </div>
+
+        <!-- CTA + Mobile Toggle -->
+        <div class="flex items-center gap-3">
+          <a href="#contact" class="hidden sm:inline-flex items-center gap-2 px-5 py-2 bg-emerald-500 text-black text-sm font-medium rounded-full hover:bg-emerald-400 transition-colors">
+            <iconify-icon icon="lucide:send" width="14"></iconify-icon>
+            Contato
+          </a>
+          <button id="mobileToggle" class="md:hidden w-10 h-10 flex items-center justify-center rounded-lg border border-white/10 hover:bg-white/5 transition">
+            <iconify-icon icon="lucide:menu" width="20" id="menuIcon"></iconify-icon>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobileMenu" class="md:hidden hidden bg-black/95 border-t border-white/5" style="backdrop-filter: blur(20px);">
+        <div class="px-6 py-4 flex flex-col gap-3">
+          <a href="#about" class="mobile-nav text-sm text-neutral-400 hover:text-white py-2 transition-colors">Sobre</a>
+          <a href="#skills" class="mobile-nav text-sm text-neutral-400 hover:text-white py-2 transition-colors">Skills</a>
+          <a href="#projects" class="mobile-nav text-sm text-neutral-400 hover:text-white py-2 transition-colors">Projetos</a>
+          <a href="#experience" class="mobile-nav text-sm text-neutral-400 hover:text-white py-2 transition-colors">Experiência</a>
+          <a href="#contact" class="mobile-nav text-sm text-neutral-400 hover:text-white py-2 transition-colors">Contato</a>
+        </div>
+      </div>
+    </nav>
+
+
+    <!-- ==================== HERO ==================== -->
+    <section id="hero" class="">
+      <!-- Orbs -->
+      <div class="orb w-96 h-96 bg-emerald-500/10 top-1/4 -left-48"></div>
+      <div class="orb w-80 h-80 bg-cyan-500/10 bottom-1/4 -right-40"></div>
+      <div class="orb w-64 h-64 bg-purple-500/5 top-1/3 right-1/4"></div>
+
+      <!-- Content -->
+      <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
+        <!-- Status Badge -->
+        <div class="animate-fade-in-up inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-emerald-500/20 bg-emerald-500/5 mb-8">
+          <div class="status-dot"></div>
+          <span class="text-xs font-medium text-emerald-400">Disponível para projetos</span>
+        </div>
+
+        <!-- Main Heading -->
+        <h1 class="animate-fade-in-up delay-1 text-4xl sm:text-6xl lg:text-7xl font-bold leading-[1.05] tracking-tight mb-6" style="opacity:0;">
+          Criando interfaces<br>
+          <span class="gradient-text">do futuro</span> com dados<br>
+          de <span class="gradient-text">hoje</span>
+        </h1>
+
+        <!-- Subtitle -->
+        <p class="animate-fade-in-up delay-2 text-base sm:text-lg text-neutral-400 max-w-2xl mx-auto mb-10 leading-relaxed" style="opacity:0;">
+          Front-end Developer &amp; Database Specialist — transformando dados complexos em experiências digitais elegantes, performáticas e intuitivas.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="animate-fade-in-up delay-3 flex flex-col sm:flex-row items-center justify-center gap-4" style="opacity:0;">
+          <a href="#projects" class="group inline-flex items-center gap-2 px-8 py-3.5 bg-white text-black text-sm font-medium rounded-full hover:bg-neutral-200 transition-colors">
+            Ver Projetos
+            <iconify-icon icon="lucide:arrow-right" width="16" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+          </a>
+          <a href="#about" class="inline-flex items-center gap-2 px-8 py-3.5 border border-white/10 text-sm font-medium rounded-full hover:bg-white/5 transition-colors">
+            <iconify-icon icon="lucide:play" width="14"></iconify-icon>
+            Conhecer mais
+          </a>
+        </div>
+
+        <!-- Terminal Preview -->
+        <div class="animate-fade-in-up delay-4 mt-16 max-w-xl mx-auto" style="opacity:0;">
+          <div class="rounded-xl border border-white/10 bg-white/[0.02] overflow-hidden" style="backdrop-filter: blur(10px);">
+            <div class="flex items-center gap-2 px-4 py-3 border-b border-white/5">
+              <div class="w-3 h-3 rounded-full bg-red-500/60"></div>
+              <div class="w-3 h-3 rounded-full bg-yellow-500/60"></div>
+              <div class="w-3 h-3 rounded-full bg-green-500/60"></div>
+              <span class="text-[10px] text-neutral-600 ml-2 font-mono">terminal</span>
+            </div>
+            <div class="p-5 text-left font-mono text-xs sm:text-sm">
+              <div class="text-neutral-500">$ <span class="text-emerald-400">whoami</span></div>
+              <div class="text-neutral-300 mt-1">→ Frontend Developer &amp; DB Specialist</div>
+              <div class="text-neutral-500 mt-3">$ <span class="text-cyan-400">cat</span> stack.json</div>
+              <div class="text-neutral-300 mt-1">→ ["React", "Next.js", "PostgreSQL", "MongoDB"]</div>
+              <div class="text-neutral-500 mt-3">$ <span class="text-purple-400 terminal-cursor">echo</span> "Bem-vindo ao meu portfólio"</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-float">
+        <div class="w-6 h-10 rounded-full border border-white/20 flex justify-center pt-2">
+          <div class="w-1 h-2 bg-emerald-400 rounded-full animate-pulse"></div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================== ABOUT ==================== -->
+    <section id="about" class="relative py-24 sm:py-32">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="reveal grid lg:grid-cols-2 gap-16 items-center">
+          <!-- Left: Visual -->
+          <div class="relative">
+            <div class="relative rounded-2xl overflow-hidden border border-white/10 bg-white/[0.02]">
+              <img src="foto.png" alt="Profile" class="w-full aspect-square object-cover opacity-80">
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent"></div>
+              <!-- Overlay Info -->
+              <div class="absolute bottom-6 left-6 right-6">
+                <div class="flex items-center gap-3 p-4 rounded-xl bg-black/60 border border-white/10" style="backdrop-filter: blur(10px);">
+                  <div class="w-12 h-12 rounded-full bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center text-black font-bold text-lg">
+                    R
+                  </div>
+                  <div>
+                    <div class="font-semibold text-sm">Renan Milanez</div>
+                    <div class="text-xs text-neutral-400">Rio de Janeiro, Brasil 🇧🇷</div>
+                  </div>
+                  <div class="ml-auto flex items-center gap-1.5">
+                    <div class="status-dot"></div>
+                    <span class="text-[10px] text-emerald-400 font-medium">Online</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Floating Badge -->
+            <div class="absolute -top-4 -right-4 animate-float px-4 py-2 rounded-xl bg-black/80 border border-emerald-500/20" style="backdrop-filter: blur(10px); animation-delay: 1s;">
+              <div class="text-xs font-medium text-emerald-400">3+ anos de exp.</div>
+            </div>
+          </div>
+
+          <!-- Right: Info -->
+          <div>
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-500/20 bg-emerald-500/5 mb-6">
+              <iconify-icon icon="lucide:user" width="12" class="text-emerald-400"></iconify-icon>
+              <span class="text-[10px] font-semibold uppercase tracking-wider text-emerald-400">Sobre mim</span>
+            </div>
+
+            <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight mb-6 leading-tight">
+              Developer<br>
+              <span class="gradient-text">Renan Milanez</span>
+            </h2>
+
+            <p class="text-neutral-400 text-sm leading-relaxed mb-6">
+              Sou um desenvolvedor apaixonado por criar experiências digitais que unem performance e estética. Com sólida experiência em Front-end e Database, desenho soluções que vão do banco de dados até o pixel final.
+            </p>
+            <p class="text-neutral-400 text-sm leading-relaxed mb-8">
+              Minha abordagem combina pensamento de sistema com sensibilidade de design — garantindo que cada componente seja não apenas bonito, mas estruturalmente robusto e escalável.
+            </p>
+
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              <div class="p-4 rounded-xl bg-white/[0.02] border border-white/5 text-center">
+                <div class="text-2xl font-bold gradient-text">50+</div>
+                <div class="text-[10px] text-neutral-500 uppercase tracking-wider mt-1">Projetos</div>
+              </div>
+              <div class="p-4 rounded-xl bg-white/[0.02] border border-white/5 text-center">
+                <div class="text-2xl font-bold gradient-text">5+</div>
+                <div class="text-[10px] text-neutral-500 uppercase tracking-wider mt-1">Anos Exp.</div>
+              </div>
+              <div class="p-4 rounded-xl bg-white/[0.02] border border-white/5 text-center">
+                <div class="text-2xl font-bold gradient-text">30+</div>
+                <div class="text-[10px] text-neutral-500 uppercase tracking-wider mt-1">Clientes</div>
+              </div>
+              <div class="p-4 rounded-xl bg-white/[0.02] border border-white/5 text-center">
+                <div class="text-2xl font-bold gradient-text">99%</div>
+                <div class="text-[10px] text-neutral-500 uppercase tracking-wider mt-1">Satisfação</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================== SKILLS ==================== -->
+    <section id="skills" class="relative py-24 sm:py-32">
+      <div class="orb w-72 h-72 bg-cyan-500/5 top-0 right-0"></div>
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Header -->
+        <div class="reveal text-center mb-16">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-cyan-500/20 bg-cyan-500/5 mb-6">
+            <iconify-icon icon="lucide:cpu" width="12" class="text-cyan-400"></iconify-icon>
+            <span class="text-[10px] font-semibold uppercase tracking-wider text-cyan-400">Tech Stack</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight">
+            Ferramentas que <span class="gradient-text">domino</span>
+          </h2>
+        </div>
+
+        <!-- Skills Categories -->
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- Frontend -->
+          <div class="reveal card-hover rounded-2xl p-6 bg-white/[0.02]">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-10 h-10 rounded-xl bg-emerald-500/10 flex items-center justify-center">
+                <iconify-icon icon="lucide:layout" width="20" class="text-emerald-400"></iconify-icon>
+              </div>
+              <div>
+                <h3 class="font-semibold text-sm">Front-end</h3>
+                <p class="text-[10px] text-neutral-500">UI &amp; Interfaces</p>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge px-3 py-1.5 rounded-lg bg-white/[0.03] text-xs text-neutral-300 flex items-center gap-1.5 cursor-default">
+              <iconify-icon icon="logos:react" width="14"></iconify-icon> React
+            </span>
+              <span class="tech-badge px-3 py-1.5 rounded-lg bg-white/[0.03] text-xs text-neutral-300 flex items-center gap-1.5 cursor-default">
+              <iconify-icon icon="logos:nextjs-icon" width="14" style="filter: invert(1);"></iconify-icon> Next.js
+            </span>
+              <span class="tech-badge px-3 py-1.5 rounded-lg bg-white/[0.03] text-xs text-neutral-300 flex items-center gap-1.5 cursor-default">
+              <iconify-icon icon="logos:typescript-icon" width="14"></iconify-icon> TypeScript
+            </span>
+              <span class="tech-badge px-3 py-1.5 rounded-lg bg-white/[0.03] text-xs text-neutral-300 flex items-center gap-1.5 cursor-default">
+              <iconify-icon icon="logos:tailwindcss-icon" width="14"></iconify-icon> Tailwind
+            </span>
+              <span class="tech-badge px-3 py-1.5 rounded-lg bg-white/[0.03] text-xs text-neutral-300 flex items-center gap-1.5 cursor-default">
+              <iconify-icon icon="logos:vue" width="14"></iconify-icon> Vue.js
+            </span>
+              <span class="tech-badge px-3 py-1.5 rounded-lg bg-white/[0.03] text-xs text-neutral-300 flex items-center gap-1.5 cursor-default">
+              <iconify-icon icon="logos:svelte-icon" width="14"></iconify-icon> Svelte
+            </span>
+            </div>
+          </div>
+
+          <!-- Database -->
+          <div class="reveal card-hover rounded-2xl p-6 bg-white/[0.02]">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-10 h-10 rounded-xl bg-cyan-500/10 flex items-center justify-center">
+                <iconify-icon icon="lucide:database" width="20" class="text-cyan-400"></iconify-icon>
+              </div>
+              <div>
+                <h3 class="font-semibold text-sm">Database</h3>
+                <p class="text-[10px] text-neutral-500">Dados &amp; Armazenamento</p>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge px-3 py-1.5 rounded-lg bg-white/[0.03] text-xs text-neutral-300 flex items-center gap-1.5 cursor-default">
+              <iconify-icon icon="logos:postgresql" width="14"></iconify-icon> PostgreSQL
+            </span>
+              <span class="tech-badge px-3 py-1.5 rounded-lg bg-white/[0.03] text-xs text-neutral-300 flex items-center gap-1.5 cursor-default">
+              <iconify-icon icon="logos:mongodb-icon" width="14"></iconify-icon> MongoDB
+            </span>
+              <span class="tech-badge px-3 py-1.5 rounded-lg bg-white/[0.03] text-xs text-neutral-300 flex items-center gap-1.5 cursor-default">
+              <iconify-icon icon="logos:redis" width="14"></iconify-icon> Redis
+            </span>
+              <span class="tech-badge px-3 py-1.5 rounded-lg bg-white/[0.03] text-xs text-neutral-300 flex items-center gap-1.5 cursor-default">
+              <iconify-icon icon="logos:mysql" width="14"></iconify-icon> MySQL
+            </span>
+              <span class="tech-badge px-3 py-1.5 rounded-lg bg-white/[0.03] text-xs text-neutral-300 flex items-center gap-1.5 cursor-default">
+              <iconify-icon icon="logos:firebase" width="14"></iconify-icon> Firebase
+            </span>
+              <span class="tech-badge px-3 py-1.5 rounded-lg bg-white/[0.03] text-xs text-neutral-300 flex items-center gap-1.5 cursor-default">
+              <iconify-icon icon="logos:supabase-icon" width="14"></iconify-icon> Supabase
+            </span>
+            </div>
+          </div>
+
+          <!-- Backend / Tools -->
+          <div class="reveal card-hover rounded-2xl p-6 bg-white/[0.02]">
+            <div class="flex items-center gap-3 mb-6">
+              <div class="w-10 h-10 rounded-xl bg-purple-500/10 flex items-center justify-center">
+                <iconify-icon icon="lucide:wrench" width="20" class="text-purple-400"></iconify-icon>
+              </div>
+              <div>
+                <h3 class="font-semibold text-sm">Ferramentas</h3>
+                <p class="text-[10px] text-neutral-500">DevOps &amp; Workflow</p>
+              </div>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              <span class="tech-badge px-3 py-1.5 rounded-lg bg-white/[0.03] text-xs text-neutral-300 flex items-center gap-1.5 cursor-default">
+              <iconify-icon icon="logos:git-icon" width="14"></iconify-icon> Git
+            </span>
+              <span class="tech-badge px-3 py-1.5 rounded-lg bg-white/[0.03] text-xs text-neutral-300 flex items-center gap-1.5 cursor-default">
+              <iconify-icon icon="logos:docker-icon" width="14"></iconify-icon> Docker
+            </span>
+              <span class="tech-badge px-3 py-1.5 rounded-lg bg-white/[0.03] text-xs text-neutral-300 flex items-center gap-1.5 cursor-default">
+              <iconify-icon icon="logos:vercel-icon" width="14" style="filter: invert(1);"></iconify-icon> Vercel
+            </span>
+              <span class="tech-badge px-3 py-1.5 rounded-lg bg-white/[0.03] text-xs text-neutral-300 flex items-center gap-1.5 cursor-default">
+              <iconify-icon icon="logos:aws" width="14"></iconify-icon> AWS
+            </span>
+              <span class="tech-badge px-3 py-1.5 rounded-lg bg-white/[0.03] text-xs text-neutral-300 flex items-center gap-1.5 cursor-default">
+              <iconify-icon icon="logos:figma" width="14"></iconify-icon> Figma
+            </span>
+              <span class="tech-badge px-3 py-1.5 rounded-lg bg-white/[0.03] text-xs text-neutral-300 flex items-center gap-1.5 cursor-default">
+              <iconify-icon icon="logos:prisma" width="14"></iconify-icon> Prisma
+            </span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Skill Bars -->
+        <div class="reveal mt-12 p-6 rounded-2xl border border-white/5 bg-white/[0.02]">
+          <h3 class="text-sm font-semibold mb-6 flex items-center gap-2">
+            <iconify-icon icon="lucide:bar-chart-3" width="16" class="text-emerald-400"></iconify-icon>
+            Nível de Proficiência
+          </h3>
+          <div class="grid sm:grid-cols-2 gap-x-12 gap-y-5">
+            <div>
+              <div class="flex justify-between text-xs mb-2">
+                <span class="text-neutral-300">React / Next.js</span>
+                <span class="text-emerald-400">95%</span>
+              </div>
+              <div class="h-1.5 bg-white/5 rounded-full overflow-hidden">
+                <div class="skill-bar h-full bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full" data-width="95%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs mb-2">
+                <span class="text-neutral-300">TypeScript</span>
+                <span class="text-emerald-400">90%</span>
+              </div>
+              <div class="h-1.5 bg-white/5 rounded-full overflow-hidden">
+                <div class="skill-bar h-full bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full" data-width="90%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs mb-2">
+                <span class="text-neutral-300">PostgreSQL</span>
+                <span class="text-cyan-400">88%</span>
+              </div>
+              <div class="h-1.5 bg-white/5 rounded-full overflow-hidden">
+                <div class="skill-bar h-full bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full" data-width="88%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs mb-2">
+                <span class="text-neutral-300">Power BI</span>
+                <span class="text-cyan-400">75%</span>
+              </div>
+              <div class="h-1.5 bg-white/5 rounded-full overflow-hidden">
+                <div class="skill-bar h-full bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full" data-width="85%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs mb-2">
+                <span class="text-neutral-300">Tailwind CSS</span>
+                <span class="text-emerald-400">97%</span>
+              </div>
+              <div class="h-1.5 bg-white/5 rounded-full overflow-hidden">
+                <div class="skill-bar h-full bg-gradient-to-r from-emerald-500 to-cyan-500 rounded-full" data-width="97%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between text-xs mb-2">
+                <span class="text-neutral-300">Docker / DevOps</span>
+                <span class="text-purple-400">75%</span>
+              </div>
+              <div class="h-1.5 bg-white/5 rounded-full overflow-hidden">
+                <div class="skill-bar h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full" data-width="75%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================== PROJECTS ==================== -->
+    <section id="projects" class="relative py-24 sm:py-32">
+      <div class="orb w-80 h-80 bg-emerald-500/5 bottom-0 left-0"></div>
+      <div class="max-w-7xl mx-auto px-6">
+        <!-- Header -->
+        <div class="reveal text-center mb-16">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-500/20 bg-emerald-500/5 mb-6">
+            <iconify-icon icon="lucide:folder-open" width="12" class="text-emerald-400"></iconify-icon>
+            <span class="text-[10px] font-semibold uppercase tracking-wider text-emerald-400">Portfólio</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight">
+            Projetos <span class="gradient-text">selecionados</span>
+          </h2>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid md:grid-cols-2 gap-6">
+
+          <!-- Project 1 -->
+          <div class="reveal project-card relative card-hover rounded-2xl overflow-hidden bg-white/[0.02] group">
+            <div class="aspect-video overflow-hidden">
+              <img src="https://picsum.photos/seed/dashboard-analytics-2026/800/450.jpg" alt="Project 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80">
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider bg-emerald-500/10 text-emerald-400 rounded-full border border-emerald-500/20">React</span>
+                <span class="px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20">PostgreSQL</span>
+              </div>
+              <h3 class="text-lg font-semibold mb-1">DataViz Dashboard</h3>
+              <p class="text-xs text-neutral-400 leading-relaxed mb-4">Plataforma de analytics em tempo real com visualizações interativas e queries otimizadas para milhões de registros.</p>
+              <div class="flex items-center gap-3">
+                <a href="#" class="inline-flex items-center gap-1.5 text-xs text-emerald-400 hover:text-emerald-300 transition-colors">
+                  <iconify-icon icon="lucide:external-link" width="12"></iconify-icon> Demo
+                </a>
+                <a href="#" class="inline-flex items-center gap-1.5 text-xs text-neutral-400 hover:text-white transition-colors">
+                  <iconify-icon icon="lucide:github" width="12"></iconify-icon> Código
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="reveal project-card relative card-hover rounded-2xl overflow-hidden bg-white/[0.02] group">
+            <div class="aspect-video overflow-hidden">
+              <img src="https://picsum.photos/seed/ecommerce-modern-2026/800/450.jpg" alt="Project 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80">
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider bg-emerald-500/10 text-emerald-400 rounded-full border border-emerald-500/20">Next.js</span>
+                <span class="px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider bg-purple-500/10 text-purple-400 rounded-full border border-purple-500/20">MongoDB</span>
+              </div>
+              <h3 class="text-lg font-semibold mb-1">NexShop Commerce</h3>
+              <p class="text-xs text-neutral-400 leading-relaxed mb-4">E-commerce headless com ISR, cache avançado e banco NoSQL otimizado para catálogos com 100k+ produtos.</p>
+              <div class="flex items-center gap-3">
+                <a href="#" class="inline-flex items-center gap-1.5 text-xs text-emerald-400 hover:text-emerald-300 transition-colors">
+                  <iconify-icon icon="lucide:external-link" width="12"></iconify-icon> Demo
+                </a>
+                <a href="#" class="inline-flex items-center gap-1.5 text-xs text-neutral-400 hover:text-white transition-colors">
+                  <iconify-icon icon="lucide:github" width="12"></iconify-icon> Código
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="reveal project-card relative card-hover rounded-2xl overflow-hidden bg-white/[0.02] group">
+            <div class="aspect-video overflow-hidden">
+              <img src="https://picsum.photos/seed/saas-platform-2026/800/450.jpg" alt="Project 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80">
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider bg-emerald-500/10 text-emerald-400 rounded-full border border-emerald-500/20">Vue.js</span>
+                <span class="px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/20">Supabase</span>
+              </div>
+              <h3 class="text-lg font-semibold mb-1">TaskFlow SaaS</h3>
+              <p class="text-xs text-neutral-400 leading-relaxed mb-4">Plataforma de gestão de projetos com Realtime subscriptions, RLS e autenticação social integrada.</p>
+              <div class="flex items-center gap-3">
+                <a href="#" class="inline-flex items-center gap-1.5 text-xs text-emerald-400 hover:text-emerald-300 transition-colors">
+                  <iconify-icon icon="lucide:external-link" width="12"></iconify-icon> Demo
+                </a>
+                <a href="#" class="inline-flex items-center gap-1.5 text-xs text-neutral-400 hover:text-white transition-colors">
+                  <iconify-icon icon="lucide:github" width="12"></iconify-icon> Código
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="reveal project-card relative card-hover rounded-2xl overflow-hidden bg-white/[0.02] group">
+            <div class="aspect-video overflow-hidden">
+              <img src="https://picsum.photos/seed/ai-chatbot-interface-2026/800/450.jpg" alt="Project 4" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 opacity-80">
+              <div class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"></div>
+            </div>
+            <div class="absolute bottom-0 left-0 right-0 p-6">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider bg-emerald-500/10 text-emerald-400 rounded-full border border-emerald-500/20">Svelte</span>
+                <span class="px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wider bg-red-500/10 text-red-400 rounded-full border border-red-500/20">Redis</span>
+              </div>
+              <h3 class="text-lg font-semibold mb-1">NeuralChat AI</h3>
+              <p class="text-xs text-neutral-400 leading-relaxed mb-4">Interface de chat com IA com streaming de respostas, cache inteligente com Redis e sessões persistentes.</p>
+              <div class="flex items-center gap-3">
+                <a href="#" class="inline-flex items-center gap-1.5 text-xs text-emerald-400 hover:text-emerald-300 transition-colors">
+                  <iconify-icon icon="lucide:external-link" width="12"></iconify-icon> Demo
+                </a>
+                <a href="#" class="inline-flex items-center gap-1.5 text-xs text-neutral-400 hover:text-white transition-colors">
+                  <iconify-icon icon="lucide:github" width="12"></iconify-icon> Código
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================== EXPERIENCE ==================== -->
+    <section id="experience" class="relative py-24 sm:py-32">
+      <div class="max-w-4xl mx-auto px-6">
+        <!-- Header -->
+        <div class="reveal text-center mb-16">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-purple-500/20 bg-purple-500/5 mb-6">
+            <iconify-icon icon="lucide:briefcase" width="12" class="text-purple-400"></iconify-icon>
+            <span class="text-[10px] font-semibold uppercase tracking-wider text-purple-400">Trajetória</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight">
+            Experiência <span class="gradient-text">profissional</span>
+          </h2>
+        </div>
+
+        <!-- Timeline -->
+        <div class="relative">
+          <!-- Line -->
+          <div class="absolute left-6 sm:left-8 top-0 bottom-0 w-px timeline-line"></div>
+
+          <!-- Item 1 -->
+          <div class="reveal relative flex gap-6 sm:gap-8 mb-12">
+            <div class="relative z-10 w-12 sm:w-16 h-12 sm:h-16 rounded-2xl bg-gradient-to-br from-emerald-500/20 to-cyan-500/20 border border-emerald-500/30 flex items-center justify-center shrink-0">
+              <iconify-icon icon="lucide:rocket" width="20" class="text-emerald-400"></iconify-icon>
+            </div>
+            <div class="pt-1">
+              <div class="flex flex-wrap items-center gap-2 mb-1">
+                <h3 class="font-semibold text-sm">Stratex - Dev</h3>
+                <span class="px-2 py-0.5 text-[10px] font-semibold bg-emerald-500/10 text-emerald-400 rounded-full border border-emerald-500/20">Atual</span>
+              </div>
+              <p class="text-xs text-neutral-500 mb-2">Developer Saas - 2023 — Presente</p>
+              <p class="text-xs text-neutral-400 leading-relaxed">Criação de web sites, aplicativos, desevolvimentos de Saas para clientes e empresas, softwares para resolução de problemas e funcionalidades interna e externa.</p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="reveal relative flex gap-6 sm:gap-8 mb-12">
+            <div class="relative z-10 w-12 sm:w-16 h-12 sm:h-16 rounded-2xl bg-gradient-to-br from-cyan-500/20 to-blue-500/20 border border-cyan-500/30 flex items-center justify-center shrink-0">
+              <iconify-icon icon="lucide:code" width="20" class="text-cyan-400"></iconify-icon>
+            </div>
+            <div class="pt-1">
+              <h3 class="font-semibold text-sm mb-1">Fundação Bradesco</h3>
+              <p class="text-xs text-neutral-500 mb-2">Desenvolvimento Frontend/ Analise de Sistemas/ Analista de Dados com Microsoft Power BI </p>
+              <p class="text-xs text-neutral-400 leading-relaxed">Criação de interfaces modernas, responsivas e interativas para aplicações web utilizando tecnologias como HTML, CSS e JavaScript.
+                Estudo, modelagem e desenvolvimento de soluções tecnológicas para otimizar processos e atender necessidades empresariais.
+                Transformação e visualização de dados em dashboards inteligentes para apoiar análises e tomadas de decisão estratégicas utilizando Power BI.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="reveal relative flex gap-6 sm:gap-8">
+            <div class="relative z-10 w-12 sm:w-16 h-12 sm:h-16 rounded-2xl bg-gradient-to-br from-yellow-500/20 to-orange-500/20 border border-yellow-500/30 flex items-center justify-center shrink-0">
+              <iconify-icon icon="lucide:graduation-cap" width="20" class="text-yellow-400"></iconify-icon>
+            </div>
+            <div class="pt-1">
+              <h3 class="font-semibold text-sm mb-1">Ciência da Computação</h3>
+              <p class="text-xs text-neutral-500 mb-2">Anhanguera · 2022 — 2026</p>
+              <p class="text-xs text-neutral-400 leading-relaxed">Bacharelado com ênfase em banco de dados e engenharia de software. TCC sobre otimização de queries em bancos distribuídos.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact" class="relative py-24 sm:py-32">
+      <div class="orb w-72 h-72 bg-emerald-500/5 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"></div>
+      <div class="max-w-4xl mx-auto px-6">
+        <!-- Header -->
+        <div class="reveal text-center mb-16">
+          <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-emerald-500/20 bg-emerald-500/5 mb-6">
+            <iconify-icon icon="lucide:mail" width="12" class="text-emerald-400"></iconify-icon>
+            <span class="text-[10px] font-semibold uppercase tracking-wider text-emerald-400">Contato</span>
+          </div>
+          <h2 class="text-3xl sm:text-4xl font-semibold tracking-tight mb-4">
+            Vamos construir algo <span class="gradient-text">incrível</span>?
+          </h2>
+          <p class="text-sm text-neutral-400 max-w-lg mx-auto">Estou sempre aberto a novos projetos, ideias ou oportunidades de colaboração. Envie uma mensagem!</p>
+        </div>
+
+        <div class="reveal grid md:grid-cols-5 gap-8">
+          <!-- Contact Info -->
+          <div class="md:col-span-2 space-y-4">
+            <a href="mailto:lucas@dev2026.com" class="flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-emerald-500/20 transition-colors group">
+              <div class="w-10 h-10 rounded-lg bg-emerald-500/10 flex items-center justify-center">
+                <iconify-icon icon="lucide:mail" width="18" class="text-emerald-400"></iconify-icon>
+              </div>
+              <div>
+                <div class="text-[10px] text-neutral-500 uppercase tracking-wider">Email</div>
+                <div class="text-sm text-neutral-300 group-hover:text-white transition-colors">milanezrenanprofissional@gmail.com</div>
+              </div>
+            </a>
+            <a href="https://github.com/RenanOMilanez" class="flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-white/10 transition-colors group">
+              <div class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center">
+                <iconify-icon icon="lucide:github" width="18" class="text-neutral-400"></iconify-icon>
+              </div>
+              <div>
+                <div class="text-[10px] text-neutral-500 uppercase tracking-wider">GitHub</div>
+                <div class="text-sm text-neutral-300 group-hover:text-white transition-colors">@RenanOMilanez</div>
+              </div>
+            </a>
+            <a href="https://www.linkedin.com/in/renan-milanez/" class="flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-blue-500/20 transition-colors group">
+              <div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center">
+                <iconify-icon icon="lucide:linkedin" width="18" class="text-blue-400"></iconify-icon>
+              </div>
+              <div>
+                <div class="text-[10px] text-neutral-500 uppercase tracking-wider">LinkedIn</div>
+                <div class="text-sm text-neutral-300 group-hover:text-white transition-colors">/in/renanmilanez</div>
+              </div>
+            </a>
+            <a href="#" class="flex items-center gap-4 p-4 rounded-xl bg-white/[0.02] border border-white/5 hover:border-purple-500/20 transition-colors group">
+              <div class="w-10 h-10 rounded-lg bg-purple-500/10 flex items-center justify-center">
+                <iconify-icon icon="lucide:instagram" width="18" class="text-purple-400"></iconify-icon>
+              </div>
+              <div>
+                <div class="text-[10px] text-neutral-500 uppercase tracking-wider">Instagram</div>
+                <div class="text-sm text-neutral-300 group-hover:text-white transition-colors">@rmilanez_dev</div>
+              </div>
+            </a>
+          </div>
+
+          <!-- Contact Form -->
+          <form id="contactForm" class="md:col-span-3 space-y-4">
+            <div class="grid sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-[10px] uppercase tracking-wider text-neutral-500 font-semibold mb-2">Nome</label>
+                <input type="text" placeholder="Seu nome" class="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-emerald-500/50 transition-colors">
+              </div>
+              <div>
+                <label class="block text-[10px] uppercase tracking-wider text-neutral-500 font-semibold mb-2">Email</label>
+                <input type="email" placeholder="seu@email.com" class="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-emerald-500/50 transition-colors">
+              </div>
+            </div>
+            <div>
+              <label class="block text-[10px] uppercase tracking-wider text-neutral-500 font-semibold mb-2">Assunto</label>
+              <input type="text" placeholder="Sobre o que deseja falar?" class="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-emerald-500/50 transition-colors">
+            </div>
+            <div>
+              <label class="block text-[10px] uppercase tracking-wider text-neutral-500 font-semibold mb-2">Mensagem</label>
+              <textarea rows="5" placeholder="Conte sobre seu projeto ou ideia..." class="w-full px-4 py-3 rounded-xl bg-white/[0.03] border border-white/10 text-sm text-white placeholder-neutral-600 focus:outline-none focus:border-emerald-500/50 transition-colors resize-none"></textarea>
+            </div>
+            <button type="submit" class="group w-full sm:w-auto inline-flex items-center justify-center gap-2 px-8 py-3.5 bg-emerald-500 text-black text-sm font-medium rounded-full hover:bg-emerald-400 transition-colors">
+              <iconify-icon icon="lucide:send" width="14"></iconify-icon>
+              Enviar Mensagem
+              <iconify-icon icon="lucide:arrow-right" width="14" class="group-hover:translate-x-1 transition-transform"></iconify-icon>
+            </button>
+            <!-- Toast Message -->
+            <div id="formToast" class="hidden items-center gap-2 px-4 py-3 rounded-xl bg-emerald-500/10 border border-emerald-500/20 text-sm text-emerald-400 mt-3">
+              <iconify-icon icon="lucide:check-circle" width="16"></iconify-icon>
+              Mensagem enviada com sucesso! Entrarei em contato em breve.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="border-t border-white/5 py-12">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-6">
+          <!-- Logo -->
+          <div class="flex items-center gap-2">
+            <div class="w-7 h-7 rounded-lg bg-gradient-to-br from-emerald-500 to-cyan-500 flex items-center justify-center text-black font-bold text-xs">
+              D
+            </div>
+            <span class="font-semibold text-sm">DEV<span class="text-emerald-400">.2026</span></span>
+          </div>
+
+          <!-- Links -->
+          <div class="flex items-center gap-6">
+            <a href="#about" class="text-xs text-neutral-500 hover:text-white transition-colors">Sobre</a>
+            <a href="#skills" class="text-xs text-neutral-500 hover:text-white transition-colors">Skills</a>
+            <a href="#projects" class="text-xs text-neutral-500 hover:text-white transition-colors">Projetos</a>
+            <a href="#contact" class="text-xs text-neutral-500 hover:text-white transition-colors">Contato</a>
+          </div>
+
+          <!-- Socials -->
+          <div class="flex items-center gap-3">
+            <a href="#" class="w-9 h-9 rounded-lg border border-white/5 flex items-center justify-center text-neutral-500 hover:text-white hover:border-white/20 transition-all">
+              <iconify-icon icon="lucide:github" width="16"></iconify-icon>
+            </a>
+            <a href="https://www.linkedin.com/in/renan-milanez/" class="w-9 h-9 rounded-lg border border-white/5 flex items-center justify-center text-neutral-500 hover:text-white hover:border-white/20 transition-all">
+              <iconify-icon icon="lucide:linkedin" width="16"></iconify-icon>
+            </a>
+            <a href="#" class="w-9 h-9 rounded-lg border border-white/5 flex items-center justify-center text-neutral-500 hover:text-white hover:border-white/20 transition-all">
+              <iconify-icon icon="lucide:twitter" width="16"></iconify-icon>
+            </a>
+          </div>
+        </div>
+
+        <!-- Bottom -->
+        <div class="mt-8 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <p class="text-[11px] text-neutral-600">© 2026 Renan Milanez. Todos os direitos reservados.</p>
+          <p class="text-[11px] text-neutral-600 flex items-center gap-1">
+            Feito com <iconify-icon icon="lucide:heart" width="12" class="text-emerald-500"></iconify-icon> e muito <iconify-icon icon="lucide:coffee" width="12" class="text-yellow-600"></iconify-icon>
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- ==================== SCRIPTS ==================== -->
+
+  </body>
+
+</html>
